@@ -1,0 +1,3899 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0",
+    "title": "MStar.REST",
+    "description": "MARKETWALL MStar.REST"
+  },
+  "basePath": "/",
+  "paths": {
+    "/account/AddChart": {
+      "post": {
+        "summary": "account/AddChart",
+        "description": "Add a 'widget' to Home",
+        "operationId": "MStar.Rest.MStarService.AddChart",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json",
+          "application/xml"
+        ],
+        "parameters": [
+          {
+            "name": "AddChartWrapper",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/AddChart"
+            }
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": "not available",
+            "schema": {
+              "type": "string",
+              "format": "stream"
+            }
+          }
+        }
+      }
+    },
+    "/account/AddList": {
+      "post": {
+        "summary": "account/AddList",
+        "description": "Add user's Lists",
+        "operationId": "MStar.Rest.MStarService.AddList",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json",
+          "application/xml"
+        ],
+        "parameters": [
+          {
+            "name": "AddListWrapper",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/AddList"
+            }
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": "not available",
+            "schema": {
+              "type": "string",
+              "format": "stream"
+            }
+          }
+        }
+      }
+    },
+    "/account/CheckSession": {
+      "get": {
+        "summary": "account/CheckSession",
+        "description": "Check current session validity",
+        "operationId": "MStar.Rest.MStarService.CheckSession",
+        "consumes": [
+          "application/json",
+          "application/xml"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "sessionCode",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": "not available",
+            "schema": {
+              "type": "string",
+              "format": "stream"
+            }
+          }
+        }
+      }
+    },
+    "/account/GetChart": {
+      "get": {
+        "summary": "account/GetChart",
+        "description": "Get Home 'widget' data",
+        "operationId": "MStar.Rest.MStarService.GetChart",
+        "consumes": [
+          "application/json",
+          "application/xml"
+        ],
+        "produces": [
+          "application/json",
+          "application/xml"
+        ],
+        "parameters": [
+          {
+            "name": "idHome",
+            "in": "query",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": "not available",
+            "schema": {
+              "type": "string",
+              "format": "stream"
+            }
+          }
+        }
+      }
+    },
+    "/account/GetList": {
+      "get": {
+        "summary": "account/GetList",
+        "description": "Get user's Lists",
+        "operationId": "MStar.Rest.MStarService.GetList",
+        "consumes": [
+          "application/json",
+          "application/xml"
+        ],
+        "produces": [
+          "application/json",
+          "application/xml"
+        ],
+        "responses": {
+          "default": {
+            "description": "not available",
+            "schema": {
+              "type": "string",
+              "format": "stream"
+            }
+          }
+        }
+      }
+    },
+    "/account/GetListDataContent": {
+      "get": {
+        "summary": "account/getListDataContent",
+        "description": "Get WatchList Data Content",
+        "operationId": "MStar.Rest.MStarService.GetListDataContent",
+        "consumes": [
+          "application/json",
+          "application/xml"
+        ],
+        "produces": [
+          "application/json",
+          "application/xml"
+        ],
+        "parameters": [
+          {
+            "name": "idList",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "letter",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "selector",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "lang",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": "not available",
+            "schema": {
+              "type": "string",
+              "format": "stream"
+            }
+          }
+        }
+      }
+    },
+    "/account/home/AddHome": {
+      "post": {
+        "summary": "account/home/AddHome",
+        "description": "Add a new Home",
+        "operationId": "MStar.Rest.MStarService.AddHome",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json",
+          "application/xml"
+        ],
+        "parameters": [
+          {
+            "name": "AddHomeWrapper",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/AddHome"
+            }
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": "not available",
+            "schema": {
+              "type": "string",
+              "format": "stream"
+            }
+          }
+        }
+      }
+    },
+    "/account/home/CloneHome": {
+      "post": {
+        "summary": "account/home/CloneHome",
+        "description": "Clone Home",
+        "operationId": "MStar.Rest.MStarService.CloneHome",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json",
+          "application/xml"
+        ],
+        "parameters": [
+          {
+            "name": "CloneHomeWrapper",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/CloneHome"
+            }
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": "not available",
+            "schema": {
+              "type": "string",
+              "format": "stream"
+            }
+          }
+        }
+      }
+    },
+    "/account/home/GetHome": {
+      "get": {
+        "summary": "account/home/GetHome",
+        "description": "Get Home widgets list",
+        "operationId": "MStar.Rest.MStarService.GetHome",
+        "consumes": [
+          "application/json",
+          "application/xml"
+        ],
+        "produces": [
+          "application/json",
+          "application/xml"
+        ],
+        "responses": {
+          "default": {
+            "description": "not available",
+            "schema": {
+              "type": "string",
+              "format": "stream"
+            }
+          }
+        }
+      }
+    },
+    "/account/home/RemoveHome": {
+      "delete": {
+        "summary": "account/home/RemoveHome",
+        "description": "Delete Home",
+        "operationId": "MStar.Rest.MStarService.RemoveHome",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json",
+          "application/xml"
+        ],
+        "parameters": [
+          {
+            "name": "RemoveHomeWrapper",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/RemoveHome"
+            }
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": "not available",
+            "schema": {
+              "type": "string",
+              "format": "stream"
+            }
+          }
+        }
+      }
+    },
+    "/account/home/RenameHome": {
+      "post": {
+        "summary": "account/home/RenameHome",
+        "description": "Rename Home",
+        "operationId": "MStar.Rest.MStarService.RenameHome",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json",
+          "application/xml"
+        ],
+        "parameters": [
+          {
+            "name": "RenameHomeWrapper",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/RenameHome"
+            }
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": "not available",
+            "schema": {
+              "type": "string",
+              "format": "stream"
+            }
+          }
+        }
+      }
+    },
+    "/account/RemoveChart": {
+      "delete": {
+        "summary": "account/RemoveChart",
+        "description": "Delete a 'widget' from Home",
+        "operationId": "MStar.Rest.MStarService.RemoveChart",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json",
+          "application/xml"
+        ],
+        "parameters": [
+          {
+            "name": "RemoveChartWrapper",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/RemoveChart"
+            }
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": "not available",
+            "schema": {
+              "type": "string",
+              "format": "stream"
+            }
+          }
+        }
+      }
+    },
+    "/account/RemoveList": {
+      "delete": {
+        "summary": "account/RemoveList",
+        "description": "Remove user's Lists",
+        "operationId": "MStar.Rest.MStarService.RemoveList",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json",
+          "application/xml"
+        ],
+        "parameters": [
+          {
+            "name": "RemoveListWrapper",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/RemoveList"
+            }
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": "not available",
+            "schema": {
+              "type": "string",
+              "format": "stream"
+            }
+          }
+        }
+      }
+    },
+    "/account/RenameList": {
+      "post": {
+        "summary": "account/RenameList",
+        "description": "Rename user's Lists",
+        "operationId": "MStar.Rest.MStarService.RenameList",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json",
+          "application/xml"
+        ],
+        "parameters": [
+          {
+            "name": "RenameListWrapper",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/RenameList"
+            }
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": "not available",
+            "schema": {
+              "type": "string",
+              "format": "stream"
+            }
+          }
+        }
+      }
+    },
+    "/bncResearch/getAdvice": {
+      "get": {
+        "summary": "bncResearch/getAdvice",
+        "description": "Get Research Advice",
+        "operationId": "MStar.Rest.MStarService.GetAllAdvice",
+        "consumes": [
+          "application/json",
+          "application/xml"
+        ],
+        "produces": [
+          "application/json",
+          "application/xml"
+        ],
+        "parameters": [
+          {
+            "name": "language",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": "not available",
+            "schema": {
+              "type": "string",
+              "format": "stream"
+            }
+          }
+        }
+      }
+    },
+    "/bncResearch/getAreas": {
+      "get": {
+        "summary": "bncResearch/getAreas",
+        "description": "Get All Research Areas",
+        "operationId": "MStar.Rest.MStarService.GetAllAreas",
+        "consumes": [
+          "application/json",
+          "application/xml"
+        ],
+        "produces": [
+          "application/json",
+          "application/xml"
+        ],
+        "parameters": [
+          {
+            "name": "language",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": "not available",
+            "schema": {
+              "type": "string",
+              "format": "stream"
+            }
+          }
+        }
+      }
+    },
+    "/bncResearch/getAreasByCode": {
+      "get": {
+        "summary": "bncResearch/getAreasByCode",
+        "description": "Get Research Areas by Code",
+        "operationId": "MStar.Rest.MStarService.GetAllAreasByCode",
+        "consumes": [
+          "application/json",
+          "application/xml"
+        ],
+        "produces": [
+          "application/json",
+          "application/xml"
+        ],
+        "parameters": [
+          {
+            "name": "code",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "language",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": "not available",
+            "schema": {
+              "type": "string",
+              "format": "stream"
+            }
+          }
+        }
+      }
+    },
+    "/bncResearch/getAssetClassesComboBox": {
+      "get": {
+        "summary": "bncResearch/getAssetClassesComboBox",
+        "description": "Get All Research Asset Classes ComboBox",
+        "operationId": "MStar.Rest.MStarService.GetAllAssetClassesComboBox",
+        "consumes": [
+          "application/json",
+          "application/xml"
+        ],
+        "produces": [
+          "application/json",
+          "application/xml"
+        ],
+        "parameters": [
+          {
+            "name": "language",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": "not available",
+            "schema": {
+              "type": "string",
+              "format": "stream"
+            }
+          }
+        }
+      }
+    },
+    "/bncResearch/getAuthors": {
+      "get": {
+        "summary": "bncResearch/getAuthors",
+        "description": "Get All Research Authors",
+        "operationId": "MStar.Rest.MStarService.GetAllAuthors",
+        "consumes": [
+          "application/json",
+          "application/xml"
+        ],
+        "produces": [
+          "application/json",
+          "application/xml"
+        ],
+        "parameters": [
+          {
+            "name": "codeArea",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "idArea",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "idAuthor",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "idDepartment",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "idAssetClass",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "type",
+            "in": "query",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "name": "name",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "language",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "name": "pageSize",
+            "in": "query",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "name": "sortName",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "sortOrder",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": "not available",
+            "schema": {
+              "type": "string",
+              "format": "stream"
+            }
+          }
+        }
+      }
+    },
+    "/bncResearch/getAuthorsComboBox": {
+      "get": {
+        "summary": "bncResearch/getAuthorsComboBox",
+        "description": "Get All Research Authors ComboBox",
+        "operationId": "MStar.Rest.MStarService.GetAllAuthorsComboBox",
+        "consumes": [
+          "application/json",
+          "application/xml"
+        ],
+        "produces": [
+          "application/json",
+          "application/xml"
+        ],
+        "parameters": [
+          {
+            "name": "codeArea",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "idArea",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "type",
+            "in": "query",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "name": "idDepartment",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "language",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": "not available",
+            "schema": {
+              "type": "string",
+              "format": "stream"
+            }
+          }
+        }
+      }
+    },
+    "/bncResearch/getAuthorsSelector": {
+      "get": {
+        "summary": "bncResearch/getAuthorsSelector",
+        "description": "Get All Research Selector",
+        "operationId": "MStar.Rest.MStarService.GetAuthorsSelector",
+        "consumes": [
+          "application/json",
+          "application/xml"
+        ],
+        "produces": [
+          "application/json",
+          "application/xml"
+        ],
+        "parameters": [
+          {
+            "name": "codeArea",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "idArea",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "typeAuthor",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "idDepartment",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "departmentNameLike",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "authorsNameLike",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "language",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": "not available",
+            "schema": {
+              "type": "string",
+              "format": "stream"
+            }
+          }
+        }
+      }
+    },
+    "/bncResearch/getDepartmentsComboBox": {
+      "get": {
+        "summary": "bncResearch/getDepartmentsComboBox",
+        "description": "Get All Research Departments ComboBox",
+        "operationId": "MStar.Rest.MStarService.GetAllDepartmentsComboBox",
+        "consumes": [
+          "application/json",
+          "application/xml"
+        ],
+        "produces": [
+          "application/json",
+          "application/xml"
+        ],
+        "parameters": [
+          {
+            "name": "codeArea",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "idArea",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "language",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": "not available",
+            "schema": {
+              "type": "string",
+              "format": "stream"
+            }
+          }
+        }
+      }
+    },
+    "/bncResearch/getLanguages": {
+      "get": {
+        "summary": "bncResearch/getLanguages",
+        "description": "Get Research Languages",
+        "operationId": "MStar.Rest.MStarService.GetLanguages",
+        "consumes": [
+          "application/json",
+          "application/xml"
+        ],
+        "produces": [
+          "application/json",
+          "application/xml"
+        ],
+        "parameters": [
+          {
+            "name": "language",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": "not available",
+            "schema": {
+              "type": "string",
+              "format": "stream"
+            }
+          }
+        }
+      }
+    },
+    "/bncResearch/getPackages": {
+      "get": {
+        "summary": "bncResearch/getPackages",
+        "description": "Get All Research Packages",
+        "operationId": "MStar.Rest.MStarService.GetAllPackages",
+        "consumes": [
+          "application/json",
+          "application/xml"
+        ],
+        "produces": [
+          "application/json",
+          "application/xml"
+        ],
+        "parameters": [
+          {
+            "name": "codeArea",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "idArea",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "language",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": "not available",
+            "schema": {
+              "type": "string",
+              "format": "stream"
+            }
+          }
+        }
+      }
+    },
+    "/bncResearch/getProducts": {
+      "get": {
+        "summary": "bncResearch/getProducts",
+        "description": "Get All Research Products",
+        "operationId": "MStar.Rest.MStarService.GetAllProducts",
+        "consumes": [
+          "application/json",
+          "application/xml"
+        ],
+        "produces": [
+          "application/json",
+          "application/xml"
+        ],
+        "parameters": [
+          {
+            "name": "codeArea",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "idArea",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "idPackage",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "language",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": "not available",
+            "schema": {
+              "type": "string",
+              "format": "stream"
+            }
+          }
+        }
+      }
+    },
+    "/bncResearch/getResearch": {
+      "get": {
+        "summary": "bncResearch/getResearch",
+        "description": "Get All Research",
+        "operationId": "MStar.Rest.MStarService.GetAllResearch",
+        "consumes": [
+          "application/json",
+          "application/xml"
+        ],
+        "produces": [
+          "application/json",
+          "application/xml"
+        ],
+        "parameters": [
+          {
+            "name": "codeArea",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "idArea",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "idPackage",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "codeProduct",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "idProduct",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "languageResearch",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "language",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "idDepartment",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "idAuthor",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "idAdvice",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "title",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "dateStart",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "dateEnd",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "inEvidence",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "status",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "relevantResearch",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "titleCode",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "name": "pageSize",
+            "in": "query",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "name": "sortName",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "sortOrder",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": "not available",
+            "schema": {
+              "type": "string",
+              "format": "stream"
+            }
+          }
+        }
+      }
+    },
+    "/bncResearch/getResearchStrategyAndNews": {
+      "get": {
+        "summary": "bncResearch/getResearchStrategyAndNews",
+        "description": "Get Research Strategy and News",
+        "operationId": "MStar.Rest.MStarService.GetResearchStrategyAndNews",
+        "consumes": [
+          "application/json",
+          "application/xml"
+        ],
+        "produces": [
+          "application/json",
+          "application/xml"
+        ],
+        "parameters": [
+          {
+            "name": "limit",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "offset",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "dateFrom",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "dateTo",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "titleLike",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "agencyCode",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "lang",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": "not available",
+            "schema": {
+              "type": "string",
+              "format": "stream"
+            }
+          }
+        }
+      }
+    },
+    "/cache/Clean": {
+      "get": {
+        "summary": "cache/Clean",
+        "description": "Clean services cache",
+        "operationId": "MStar.Rest.MStarService.CleanCache",
+        "consumes": [
+          "application/json",
+          "application/xml"
+        ],
+        "produces": [
+          "application/json",
+          "application/xml"
+        ],
+        "parameters": [
+          {
+            "name": "action",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "allservers",
+            "in": "query",
+            "required": true,
+            "type": "boolean"
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": "not available",
+            "schema": {
+              "type": "string",
+              "format": "stream"
+            }
+          }
+        }
+      }
+    },
+    "/common/GetSpIsinToFilter": {
+      "get": {
+        "summary": "common/GetSpIsinToFilter",
+        "description": "Get Isin to filter",
+        "operationId": "MStar.Rest.MStarService.GetSpIsinToFilterCommon",
+        "consumes": [
+          "application/json",
+          "application/xml"
+        ],
+        "produces": [
+          "application/json",
+          "application/xml"
+        ],
+        "responses": {
+          "default": {
+            "description": "not available",
+            "schema": {
+              "type": "string",
+              "format": "stream"
+            }
+          }
+        }
+      }
+    },
+    "/livetv/SearchLiveTv": {
+      "get": {
+        "summary": "livetv/SearchLiveTv",
+        "description": "Search 'LiveTv'",
+        "operationId": "MStar.Rest.MStarService.SearchLiveTv",
+        "consumes": [
+          "application/json",
+          "application/xml"
+        ],
+        "produces": [
+          "application/json",
+          "application/xml"
+        ],
+        "parameters": [
+          {
+            "name": "isActiveStr",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "lang",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": "not available",
+            "schema": {
+              "type": "string",
+              "format": "stream"
+            }
+          }
+        }
+      }
+    },
+    "/login/Logout": {
+      "get": {
+        "summary": "login/Logout",
+        "description": "Logout User and invalidate the 'Marketwall' internal Session",
+        "operationId": "MStar.Rest.MStarService.Logout",
+        "consumes": [
+          "application/json",
+          "application/xml"
+        ],
+        "produces": [
+          "application/json",
+          "application/xml"
+        ],
+        "responses": {
+          "default": {
+            "description": "not available",
+            "schema": {
+              "type": "string",
+              "format": "stream"
+            }
+          }
+        }
+      }
+    },
+    "/login/marketwall/Authenticate": {
+      "post": {
+        "summary": "login/marketwall/Authenticate",
+        "description": "Authenticate User and instantiate a new 'Marketwall' internal Session",
+        "operationId": "MStar.Rest.MStarService.AuthenticateMarketWallLogin",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json",
+          "application/xml"
+        ],
+        "parameters": [
+          {
+            "name": "AuthenticateMarketWallLoginWrapper",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/AuthenticateMarketWallLogin"
+            }
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": "not available",
+            "schema": {
+              "type": "string",
+              "format": "stream"
+            }
+          }
+        }
+      }
+    },
+    "/login/marketwall/CheckRegistration": {
+      "post": {
+        "summary": "login/marketwall/CheckRegistration",
+        "description": "Check User registration",
+        "operationId": "MStar.Rest.MStarService.MarketWallCheckRegistration",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json",
+          "application/xml"
+        ],
+        "parameters": [
+          {
+            "name": "MarketWallCheckRegistrationWrapper",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/MarketWallCheckRegistration"
+            }
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": "not available",
+            "schema": {
+              "type": "string",
+              "format": "stream"
+            }
+          }
+        }
+      }
+    },
+    "/login/marketwall/ConfirmActivation": {
+      "get": {
+        "summary": "login/marketwall/ConfirmActivation",
+        "description": "Confirm user activation",
+        "operationId": "MStar.Rest.MStarService.ConfirmActivation",
+        "consumes": [
+          "application/json",
+          "application/xml"
+        ],
+        "produces": [
+          "application/json",
+          "application/xml"
+        ],
+        "parameters": [
+          {
+            "name": "code",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": "not available",
+            "schema": {
+              "type": "string",
+              "format": "stream"
+            }
+          }
+        }
+      }
+    },
+    "/login/marketwall/RecoveryPassword": {
+      "post": {
+        "summary": "login/marketwall/RecoveryPassword",
+        "description": "Password Recovery",
+        "operationId": "MStar.Rest.MStarService.RecoveryPassword",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json",
+          "application/xml"
+        ],
+        "parameters": [
+          {
+            "name": "RecoveryPasswordWrapper",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/RecoveryPassword"
+            }
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": "not available",
+            "schema": {
+              "type": "string",
+              "format": "stream"
+            }
+          }
+        }
+      }
+    },
+    "/login/marketwall/Register": {
+      "post": {
+        "summary": "login/marketwall/Register",
+        "description": "New User registration",
+        "operationId": "MStar.Rest.MStarService.RegisterMarketWallLogin",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json",
+          "application/xml"
+        ],
+        "parameters": [
+          {
+            "name": "RegisterMarketWallLoginWrapper",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/RegisterMarketWallLogin"
+            }
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": "not available",
+            "schema": {
+              "type": "string",
+              "format": "stream"
+            }
+          }
+        }
+      }
+    },
+    "/login/marketwall/SendActivationLink": {
+      "get": {
+        "summary": "login/marketwall/SendActivationLink",
+        "description": "Send Activation Link by mail",
+        "operationId": "MStar.Rest.MStarService.SendActivationLink",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json",
+          "application/xml"
+        ],
+        "parameters": [
+          {
+            "name": "SendActivationLinkWrapper",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/SendActivationLink"
+            }
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": "not available",
+            "schema": {
+              "type": "string",
+              "format": "stream"
+            }
+          }
+        }
+      }
+    },
+    "/login/marketwall/SendRecoveryPasswordLink": {
+      "get": {
+        "summary": "login/marketwall/SendRecoveryPasswordLink",
+        "description": "Send Recovery Password Link by mail",
+        "operationId": "MStar.Rest.MStarService.SendRecoveryPasswordLink",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json",
+          "application/xml"
+        ],
+        "parameters": [
+          {
+            "name": "mail",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "SendRecoveryPasswordLinkWrapper",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/SendRecoveryPasswordLink"
+            }
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": "not available",
+            "schema": {
+              "type": "string",
+              "format": "stream"
+            }
+          }
+        }
+      }
+    },
+    "/login/marketwall/Status": {
+      "get": {
+        "summary": "login/marketwall/Status",
+        "description": "Get current account status",
+        "operationId": "MStar.Rest.MStarService.StatusAccount",
+        "consumes": [
+          "application/json",
+          "application/xml"
+        ],
+        "produces": [
+          "application/json",
+          "application/xml"
+        ],
+        "responses": {
+          "default": {
+            "description": "not available",
+            "schema": {
+              "type": "string",
+              "format": "stream"
+            }
+          }
+        }
+      }
+    },
+    "/login/marketwall/UpdatePassword": {
+      "post": {
+        "summary": "login/marketwall/UpdatePassword",
+        "description": "Update User's password",
+        "operationId": "MStar.Rest.MStarService.UpdatePassword",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json",
+          "application/xml"
+        ],
+        "parameters": [
+          {
+            "name": "UpdatePasswordWrapper",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/UpdatePassword"
+            }
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": "not available",
+            "schema": {
+              "type": "string",
+              "format": "stream"
+            }
+          }
+        }
+      }
+    },
+    "/map/getMapIndexByZone": {
+      "get": {
+        "summary": "map/getMapIndexByZone",
+        "description": "Get Indices Map by zone",
+        "operationId": "MStar.Rest.MStarService.GetMapIndexByZone",
+        "consumes": [
+          "application/json",
+          "application/xml"
+        ],
+        "produces": [
+          "application/json",
+          "application/xml"
+        ],
+        "parameters": [
+          {
+            "name": "zone",
+            "in": "query",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "name": "language",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": "not available",
+            "schema": {
+              "type": "string",
+              "format": "stream"
+            }
+          }
+        }
+      }
+    },
+    "/map/getMapPlanisphere": {
+      "get": {
+        "summary": "map/getMapPlanisphere",
+        "description": "Get Indices Planisphere",
+        "operationId": "MStar.Rest.MStarService.GetMapPlanisphere",
+        "consumes": [
+          "application/json",
+          "application/xml"
+        ],
+        "produces": [
+          "application/json",
+          "application/xml"
+        ],
+        "responses": {
+          "default": {
+            "description": "not available",
+            "schema": {
+              "type": "string",
+              "format": "stream"
+            }
+          }
+        }
+      }
+    },
+    "/mstarapi/getEtfAssetClass": {
+      "get": {
+        "summary": "mstarapi/getEtfAssetClass",
+        "description": "Get MStar API ETF Asset Class",
+        "operationId": "MStar.Rest.MStarService.MStarApiGetEtfAssetClass",
+        "consumes": [
+          "application/json",
+          "application/xml"
+        ],
+        "produces": [
+          "application/json",
+          "application/xml"
+        ],
+        "responses": {
+          "default": {
+            "description": "not available",
+            "schema": {
+              "type": "string",
+              "format": "stream"
+            }
+          }
+        }
+      }
+    },
+    "/mstarapi/getEtfAssetManager": {
+      "get": {
+        "summary": "mstarapi/getEtfAssetManager",
+        "description": "Get MStar API ETF Asset Manager",
+        "operationId": "MStar.Rest.MStarService.MStarApiGetEtfAssetManager",
+        "consumes": [
+          "application/json",
+          "application/xml"
+        ],
+        "produces": [
+          "application/json",
+          "application/xml"
+        ],
+        "responses": {
+          "default": {
+            "description": "not available",
+            "schema": {
+              "type": "string",
+              "format": "stream"
+            }
+          }
+        }
+      }
+    },
+    "/mstarapi/getEtfCurrency": {
+      "get": {
+        "summary": "mstarapi/getEtfCurrency",
+        "description": "Get MStar API ETF Currency",
+        "operationId": "MStar.Rest.MStarService.MStarApiGetEtfCurrency",
+        "consumes": [
+          "application/json",
+          "application/xml"
+        ],
+        "produces": [
+          "application/json",
+          "application/xml"
+        ],
+        "responses": {
+          "default": {
+            "description": "not available",
+            "schema": {
+              "type": "string",
+              "format": "stream"
+            }
+          }
+        }
+      }
+    },
+    "/mstarapi/getEtfExchange": {
+      "get": {
+        "summary": "mstarapi/getEtfExchange",
+        "description": "Get MStar API ETF Exchange",
+        "operationId": "MStar.Rest.MStarService.MStarApiGetEtfExchange",
+        "consumes": [
+          "application/json",
+          "application/xml"
+        ],
+        "produces": [
+          "application/json",
+          "application/xml"
+        ],
+        "responses": {
+          "default": {
+            "description": "not available",
+            "schema": {
+              "type": "string",
+              "format": "stream"
+            }
+          }
+        }
+      }
+    },
+    "/mstarapi/getEtfGeographicRegion": {
+      "get": {
+        "summary": "mstarapi/getEtfGeographicRegion",
+        "description": "Get MStar API ETF Geographic Region",
+        "operationId": "MStar.Rest.MStarService.MStarApiGetEtfGeographicRegion",
+        "consumes": [
+          "application/json",
+          "application/xml"
+        ],
+        "produces": [
+          "application/json",
+          "application/xml"
+        ],
+        "responses": {
+          "default": {
+            "description": "not available",
+            "schema": {
+              "type": "string",
+              "format": "stream"
+            }
+          }
+        }
+      }
+    },
+    "/mstarapi/getEtfGlobalCategory": {
+      "get": {
+        "summary": "mstarapi/getEtfGlobalCategory",
+        "description": "Get MStar API ETF Global Category",
+        "operationId": "MStar.Rest.MStarService.MStarApiGetEtfGlobalCategory",
+        "consumes": [
+          "application/json",
+          "application/xml"
+        ],
+        "produces": [
+          "application/json",
+          "application/xml"
+        ],
+        "responses": {
+          "default": {
+            "description": "not available",
+            "schema": {
+              "type": "string",
+              "format": "stream"
+            }
+          }
+        }
+      }
+    },
+    "/mstarapi/getEtfMorningStarCategory": {
+      "get": {
+        "summary": "mstarapi/getEtfMorningStarCategory",
+        "description": "Get ETF MorningStar Category",
+        "operationId": "MStar.Rest.MStarService.MStarApiGetEtfMorningStarCategory",
+        "consumes": [
+          "application/json",
+          "application/xml"
+        ],
+        "produces": [
+          "application/json",
+          "application/xml"
+        ],
+        "responses": {
+          "default": {
+            "description": "not available",
+            "schema": {
+              "type": "string",
+              "format": "stream"
+            }
+          }
+        }
+      }
+    },
+    "/mstarapi/getEtfReply": {
+      "get": {
+        "summary": "mstarapi/getEtfReply",
+        "description": "Get MStar API ETF Reply",
+        "operationId": "MStar.Rest.MStarService.MStarApiGetEtfReply",
+        "consumes": [
+          "application/json",
+          "application/xml"
+        ],
+        "produces": [
+          "application/json",
+          "application/xml"
+        ],
+        "responses": {
+          "default": {
+            "description": "not available",
+            "schema": {
+              "type": "string",
+              "format": "stream"
+            }
+          }
+        }
+      }
+    },
+    "/mstarapi/getEtfSector": {
+      "get": {
+        "summary": "mstarapi/getEtfSector",
+        "description": "Get MStar API ETF Sector",
+        "operationId": "MStar.Rest.MStarService.MStarApiGetEtfSector",
+        "consumes": [
+          "application/json",
+          "application/xml"
+        ],
+        "produces": [
+          "application/json",
+          "application/xml"
+        ],
+        "responses": {
+          "default": {
+            "description": "not available",
+            "schema": {
+              "type": "string",
+              "format": "stream"
+            }
+          }
+        }
+      }
+    },
+    "/mstarapi/getEtfSSRI": {
+      "get": {
+        "summary": "mstarapi/getEtfSSRI",
+        "description": "Get MStar API ETF SSRI",
+        "operationId": "MStar.Rest.MStarService.MStarApiGetEtfSSRI",
+        "consumes": [
+          "application/json",
+          "application/xml"
+        ],
+        "produces": [
+          "application/json",
+          "application/xml"
+        ],
+        "responses": {
+          "default": {
+            "description": "not available",
+            "schema": {
+              "type": "string",
+              "format": "stream"
+            }
+          }
+        }
+      }
+    },
+    "/mstarapi/getSector": {
+      "get": {
+        "summary": "mstarapi/getSector",
+        "description": "Get MStar API Sector",
+        "operationId": "MStar.Rest.MStarService.MStarApiGetSector",
+        "consumes": [
+          "application/json",
+          "application/xml"
+        ],
+        "produces": [
+          "application/json",
+          "application/xml"
+        ],
+        "responses": {
+          "default": {
+            "description": "not available",
+            "schema": {
+              "type": "string",
+              "format": "stream"
+            }
+          }
+        }
+      }
+    },
+    "/mstarapi/getToken": {
+      "get": {
+        "summary": "mstarapi/getToken",
+        "description": "Get MStar API Token",
+        "operationId": "MStar.Rest.MStarService.MStarApiGetToken",
+        "consumes": [
+          "application/json",
+          "application/xml"
+        ],
+        "produces": [
+          "application/json",
+          "application/xml"
+        ],
+        "parameters": [
+          {
+            "name": "svc",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": "not available",
+            "schema": {
+              "type": "string",
+              "format": "stream"
+            }
+          }
+        }
+      }
+    },
+    "/news/GetNews": {
+      "get": {
+        "summary": "news/GetNews",
+        "description": "Get 'server-side paged' News filterable list",
+        "operationId": "MStar.Rest.MStarService.GetNews",
+        "consumes": [
+          "application/json",
+          "application/xml"
+        ],
+        "produces": [
+          "application/json",
+          "application/xml"
+        ],
+        "parameters": [
+          {
+            "name": "limit",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "offset",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "dateFrom",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "dateTo",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "titleLike",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "codeInstr",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "agencyCode",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "lang",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": "not available",
+            "schema": {
+              "type": "string",
+              "format": "stream"
+            }
+          }
+        }
+      }
+    },
+    "/news/GetNewsById": {
+      "get": {
+        "summary": "news/GetNewsById",
+        "description": "Get a News by Id",
+        "operationId": "MStar.Rest.MStarService.getNewsById",
+        "consumes": [
+          "application/json",
+          "application/xml"
+        ],
+        "produces": [
+          "application/json",
+          "application/xml"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": "not available",
+            "schema": {
+              "type": "string",
+              "format": "stream"
+            }
+          }
+        }
+      }
+    },
+    "/screener/searchbond": {
+      "get": {
+        "summary": "screener/searchbond",
+        "description": "Screener Search Bond",
+        "operationId": "MStar.Rest.MStarService.ScreenerSearchBond",
+        "consumes": [
+          "application/json",
+          "application/xml"
+        ],
+        "produces": [
+          "application/json",
+          "application/xml"
+        ],
+        "parameters": [
+          {
+            "name": "term",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "dataScadenza",
+            "in": "query",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "name": "idMenu",
+            "in": "query",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "name": "emittente",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "currency",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "sizeMin",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "sizeMax",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "ratingSP",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "yieldMin",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "yieldMax",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "durationMin",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "durationMax",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "sortname",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "sortorder",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": "not available",
+            "schema": {
+              "type": "string",
+              "format": "stream"
+            }
+          }
+        }
+      }
+    },
+    "/screener/searchcwcertificates": {
+      "get": {
+        "summary": "screener/searchcwcertificates",
+        "description": "Screener Search CW & Certificates",
+        "operationId": "MStar.Rest.MStarService.ScreenerSearchCwCertificates",
+        "consumes": [
+          "application/json",
+          "application/xml"
+        ],
+        "produces": [
+          "application/json",
+          "application/xml"
+        ],
+        "parameters": [
+          {
+            "name": "term",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "idMenu",
+            "in": "query",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "name": "emittente",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "currency",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "sortname",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "sortorder",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": "not available",
+            "schema": {
+              "type": "string",
+              "format": "stream"
+            }
+          }
+        }
+      }
+    },
+    "/screener/searchequity": {
+      "get": {
+        "summary": "screener/searchequity",
+        "description": "Screener Search Equity",
+        "operationId": "MStar.Rest.MStarService.ScreenerSearchEquity",
+        "consumes": [
+          "application/json",
+          "application/xml"
+        ],
+        "produces": [
+          "application/json",
+          "application/xml"
+        ],
+        "parameters": [
+          {
+            "name": "devUserID",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "lang",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "term",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "currency",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "marketCap",
+            "in": "query",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "name": "dividendyield",
+            "in": "query",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "name": "totalreturntimeframe",
+            "in": "query",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "name": "totalreturn",
+            "in": "query",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "name": "sector",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "quantitativeMoatLabel",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "quantitativeValuationLabel",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "msRating",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "sortname",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "sortorder",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": "not available",
+            "schema": {
+              "type": "string",
+              "format": "stream"
+            }
+          }
+        }
+      }
+    },
+    "/screener/searchetf": {
+      "get": {
+        "summary": "screener/searchetf",
+        "description": "Screener Search ETF",
+        "operationId": "MStar.Rest.MStarService.ScreenerSearchEtf",
+        "consumes": [
+          "application/json",
+          "application/xml"
+        ],
+        "produces": [
+          "application/json",
+          "application/xml"
+        ],
+        "parameters": [
+          {
+            "name": "lang",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "term",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "universe",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "currency",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "asmng",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "gc",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "catmstar",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "spgestione",
+            "in": "query",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "name": "patr",
+            "in": "query",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "name": "lrgSector",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "msRating",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "gr",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "totalreturntimeframe",
+            "in": "query",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "name": "totalreturn",
+            "in": "query",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "name": "asclass",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "srri",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "replyEtf",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "exchange",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "equitystylebox",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "bondstylebox",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "analystRatingScal",
+            "in": "query",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "name": "sustainabilityRank",
+            "in": "query",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "name": "sortname",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "sortorder",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": "not available",
+            "schema": {
+              "type": "string",
+              "format": "stream"
+            }
+          }
+        }
+      }
+    },
+    "/series/advchart/Get": {
+      "get": {
+        "summary": "series/advchart/Get",
+        "description": "Get Advanced chart data",
+        "operationId": "MStar.Rest.MStarService.GetAdvancedChart",
+        "consumes": [
+          "application/json",
+          "application/xml"
+        ],
+        "produces": [
+          "application/json",
+          "application/xml"
+        ],
+        "parameters": [
+          {
+            "name": "code",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "isincomp",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "eventi",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "selector",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "lang",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": "not available",
+            "schema": {
+              "type": "string",
+              "format": "stream"
+            }
+          }
+        }
+      }
+    },
+    "/series/agileDossierByStock": {
+      "get": {
+        "summary": "series/agileDossierByStock",
+        "description": "Instrument AGILE 'dossier'",
+        "operationId": "MStar.Rest.MStarService.AgileDossierByStock",
+        "consumes": [
+          "application/json",
+          "application/xml"
+        ],
+        "produces": [
+          "application/json",
+          "application/xml"
+        ],
+        "parameters": [
+          {
+            "name": "code",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "language",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": "not available",
+            "schema": {
+              "type": "string",
+              "format": "stream"
+            }
+          }
+        }
+      }
+    },
+    "/series/agileInstantByIndex": {
+      "get": {
+        "summary": "series/agileInstantByIndex",
+        "description": "AGILE 'Instant' list by index",
+        "operationId": "MStar.Rest.MStarService.AgileInstantByIndex",
+        "consumes": [
+          "application/json",
+          "application/xml"
+        ],
+        "produces": [
+          "application/json",
+          "application/xml"
+        ],
+        "parameters": [
+          {
+            "name": "menuid",
+            "in": "query",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          },
+          {
+            "name": "letter",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "lang",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "menualias",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "type",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": "not available",
+            "schema": {
+              "type": "string",
+              "format": "stream"
+            }
+          }
+        }
+      }
+    },
+    "/series/dossierByStock": {
+      "get": {
+        "summary": "series/dossierByStock",
+        "description": "Instrument 'dossier'",
+        "operationId": "MStar.Rest.MStarService.DossierByStock",
+        "consumes": [
+          "application/json",
+          "application/xml"
+        ],
+        "produces": [
+          "application/json",
+          "application/xml"
+        ],
+        "parameters": [
+          {
+            "name": "code",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "lang",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "isin",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "menualias",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "type",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": "not available",
+            "schema": {
+              "type": "string",
+              "format": "stream"
+            }
+          }
+        }
+      }
+    },
+    "/series/getAgileMenuByUser": {
+      "get": {
+        "summary": "series/getAgileMenuByUser",
+        "description": "Get User's AGILE Menu",
+        "operationId": "MStar.Rest.MStarService.GetAgileMenuByUser",
+        "consumes": [
+          "application/json",
+          "application/xml"
+        ],
+        "produces": [
+          "application/json",
+          "application/xml"
+        ],
+        "parameters": [
+          {
+            "name": "lang",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": "not available",
+            "schema": {
+              "type": "string",
+              "format": "stream"
+            }
+          }
+        }
+      }
+    },
+    "/series/GetForexCrossData": {
+      "get": {
+        "summary": "series/GetForexCrossData",
+        "description": "Get Forex 'Cross' data",
+        "operationId": "MStar.Rest.MStarService.GetForexCrossData",
+        "consumes": [
+          "application/json",
+          "application/xml"
+        ],
+        "produces": [
+          "application/json",
+          "application/xml"
+        ],
+        "parameters": [
+          {
+            "name": "menuid",
+            "in": "query",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          },
+          {
+            "name": "menuAlias",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "type",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "lang",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": "not available",
+            "schema": {
+              "type": "string",
+              "format": "stream"
+            }
+          }
+        }
+      }
+    },
+    "/series/getInfoByUnderlyingIsin": {
+      "get": {
+        "summary": "series/getInfoByUnderlyingIsin",
+        "description": "Get info by Underlying Isin",
+        "operationId": "MStar.Rest.MStarService.GetInfoByUnderlyingIsin",
+        "consumes": [
+          "application/json",
+          "application/xml"
+        ],
+        "produces": [
+          "application/json",
+          "application/xml"
+        ],
+        "parameters": [
+          {
+            "name": "uisin",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "typeFilter",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "lang",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": "not available",
+            "schema": {
+              "type": "string",
+              "format": "stream"
+            }
+          }
+        }
+      }
+    },
+    "/series/getmarketcapranking": {
+      "get": {
+        "summary": "series/getmarketcapranking",
+        "description": "Get MarketCap ranking",
+        "operationId": "MStar.Rest.MStarService.GetMarketCapRankingByNationMenu",
+        "consumes": [
+          "application/json",
+          "application/xml"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "menuid",
+            "in": "query",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "name": "lang",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": "not available",
+            "schema": {
+              "type": "string",
+              "format": "stream"
+            }
+          }
+        }
+      }
+    },
+    "/series/getMenuByUser": {
+      "get": {
+        "summary": "series/getMenuByUser",
+        "description": "Get User's Menu",
+        "operationId": "MStar.Rest.MStarService.GetMenuByUser",
+        "consumes": [
+          "application/json",
+          "application/xml"
+        ],
+        "produces": [
+          "application/json",
+          "application/xml"
+        ],
+        "parameters": [
+          {
+            "name": "lang",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": "not available",
+            "schema": {
+              "type": "string",
+              "format": "stream"
+            }
+          }
+        }
+      }
+    },
+    "/series/getrisersfallers": {
+      "get": {
+        "summary": "series/getRisersFallers",
+        "description": "Get Risers/Fallers menu",
+        "operationId": "MStar.Rest.MStarService.GetRisersFallers",
+        "consumes": [
+          "application/json",
+          "application/xml"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "menuid",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "feeds",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "language",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": "not available",
+            "schema": {
+              "type": "string",
+              "format": "stream"
+            }
+          }
+        }
+      }
+    },
+    "/series/GetSyntheticSeries": {
+      "post": {
+        "summary": "series/series/GetSyntheticSeries",
+        "description": "Get 'Synthetic' Series",
+        "operationId": "MStar.Rest.MStarService.GetSyntheticSeries",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json",
+          "application/xml"
+        ],
+        "parameters": [
+          {
+            "name": "interval",
+            "in": "query",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "name": "GetSyntheticSeriesWrapper",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/GetSyntheticSeries"
+            }
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": "not available",
+            "schema": {
+              "type": "string",
+              "format": "stream"
+            }
+          }
+        }
+      }
+    },
+    "/series/GetUpdatedTitle": {
+      "post": {
+        "summary": "series/GetUpdatedTitle",
+        "description": "Get Updated data by Title list",
+        "operationId": "MStar.Rest.MStarService.GetUpdatedTitle",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json",
+          "application/xml"
+        ],
+        "parameters": [
+          {
+            "name": "lang",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "GetUpdatedTitleWrapper",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/GetUpdatedTitle"
+            }
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": "not available",
+            "schema": {
+              "type": "string",
+              "format": "stream"
+            }
+          }
+        }
+      }
+    },
+    "/series/instantByIndex": {
+      "get": {
+        "summary": "series/instantByIndex",
+        "description": "'Instant' list by index",
+        "operationId": "MStar.Rest.MStarService.InstantByIndex",
+        "consumes": [
+          "application/json",
+          "application/xml"
+        ],
+        "produces": [
+          "application/json",
+          "application/xml"
+        ],
+        "parameters": [
+          {
+            "name": "menuid",
+            "in": "query",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          },
+          {
+            "name": "letter",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "lang",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "menualias",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "type",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": "not available",
+            "schema": {
+              "type": "string",
+              "format": "stream"
+            }
+          }
+        }
+      }
+    },
+    "/service/GetSocialNews": {
+      "get": {
+        "summary": "service/GetSocialNews",
+        "description": "Get 'Social' News",
+        "operationId": "MStar.Rest.MStarService.GetSocialNews",
+        "consumes": [
+          "application/json",
+          "application/xml"
+        ],
+        "produces": [
+          "application/json",
+          "application/xml"
+        ],
+        "parameters": [
+          {
+            "name": "lang",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "title",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "channelName",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "offset",
+            "in": "query",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": "not available",
+            "schema": {
+              "type": "string",
+              "format": "stream"
+            }
+          }
+        }
+      }
+    },
+    "/service/GetVideoNews": {
+      "get": {
+        "summary": "service/GetVideoNews",
+        "description": "Get 'Video' News",
+        "operationId": "MStar.Rest.MStarService.GetVideoNews",
+        "consumes": [
+          "application/json",
+          "application/xml"
+        ],
+        "produces": [
+          "application/json",
+          "application/xml"
+        ],
+        "parameters": [
+          {
+            "name": "lang",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "title",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "channelName",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "offset",
+            "in": "query",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": "not available",
+            "schema": {
+              "type": "string",
+              "format": "stream"
+            }
+          }
+        }
+      }
+    },
+    "/service/SearchTitles": {
+      "get": {
+        "summary": "service/SearchTitles",
+        "description": "Titles search",
+        "operationId": "MStar.Rest.MStarService.SearchTitles",
+        "consumes": [
+          "application/json",
+          "application/xml"
+        ],
+        "produces": [
+          "application/json",
+          "application/xml"
+        ],
+        "parameters": [
+          {
+            "name": "t",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "filter",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "type",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "lang",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": "not available",
+            "schema": {
+              "type": "string",
+              "format": "stream"
+            }
+          }
+        }
+      }
+    },
+    "/ticker/getTitleTicker": {
+      "get": {
+        "summary": "ticker/getTitleTicker",
+        "description": "Get 'Titles Ticker' data",
+        "operationId": "MStar.Rest.MStarService.GetTitleTicker",
+        "consumes": [
+          "application/json",
+          "application/xml"
+        ],
+        "produces": [
+          "application/json",
+          "application/xml"
+        ],
+        "parameters": [
+          {
+            "name": "language",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": "not available",
+            "schema": {
+              "type": "string",
+              "format": "stream"
+            }
+          }
+        }
+      }
+    },
+    "/timeline/GetTimeline": {
+      "get": {
+        "summary": "timeline/GetTimeline",
+        "description": "Get the News 'Timeline'",
+        "operationId": "MStar.Rest.MStarService.GetTimeline",
+        "consumes": [
+          "application/json",
+          "application/xml"
+        ],
+        "produces": [
+          "application/json",
+          "application/xml"
+        ],
+        "parameters": [
+          {
+            "name": "lang",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "ag",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "agencyCode",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "isin",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": "not available",
+            "schema": {
+              "type": "string",
+              "format": "stream"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "AddChart": {
+      "properties": {
+        "data": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/MStar.Model.Json.JsonAccountChart"
+          },
+          "uniqueItems": false
+        }
+      },
+      "type": "object",
+      "format": "AddChart"
+    },
+    "AddHome": {
+      "properties": {
+        "data": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/MStar.Model.Json.JsonAccountHome"
+          },
+          "uniqueItems": false
+        }
+      },
+      "type": "object",
+      "format": "AddHome"
+    },
+    "AddList": {
+      "properties": {
+        "data": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/MStar.Model.Json.JsonAccountList"
+          },
+          "uniqueItems": false
+        }
+      },
+      "type": "object",
+      "format": "AddList"
+    },
+    "AuthenticateMarketWallLogin": {
+      "properties": {
+        "username": {
+          "type": "string",
+          "uniqueItems": false
+        },
+        "email": {
+          "type": "string",
+          "uniqueItems": false
+        },
+        "password": {
+          "type": "string",
+          "uniqueItems": false
+        },
+        "companyCode": {
+          "type": "string",
+          "uniqueItems": false
+        },
+        "country": {
+          "type": "string",
+          "uniqueItems": false
+        }
+      },
+      "type": "object",
+      "format": "AuthenticateMarketWallLogin"
+    },
+    "CloneHome": {
+      "properties": {
+        "IdSource": {
+          "type": "integer",
+          "format": "int32",
+          "uniqueItems": false
+        },
+        "Code": {
+          "type": "string",
+          "uniqueItems": false
+        },
+        "IdWidgetToDel": {
+          "type": "integer",
+          "format": "int32",
+          "uniqueItems": false
+        },
+        "SetAsCustom": {
+          "type": "boolean",
+          "uniqueItems": false
+        },
+        "Data": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/MStar.Model.Json.JsonAccountChart"
+          },
+          "uniqueItems": false
+        }
+      },
+      "type": "object",
+      "format": "CloneHome"
+    },
+    "GetSyntheticSeries": {
+      "properties": {
+        "codes": {
+          "type": "string",
+          "uniqueItems": false
+        }
+      },
+      "type": "object",
+      "format": "GetSyntheticSeries"
+    },
+    "GetUpdatedTitle": {
+      "properties": {
+        "codes": {
+          "type": "string",
+          "uniqueItems": false
+        }
+      },
+      "type": "object",
+      "format": "GetUpdatedTitle"
+    },
+    "MarketWallCheckRegistration": {
+      "properties": {
+        "email": {
+          "type": "string",
+          "uniqueItems": false
+        },
+        "password": {
+          "type": "string",
+          "uniqueItems": false
+        },
+        "firstname": {
+          "type": "string",
+          "uniqueItems": false
+        },
+        "lastname": {
+          "type": "string",
+          "uniqueItems": false
+        },
+        "country": {
+          "type": "string",
+          "uniqueItems": false
+        },
+        "profile": {
+          "type": "integer",
+          "format": "int32",
+          "uniqueItems": false
+        }
+      },
+      "type": "object",
+      "format": "MarketWallCheckRegistration"
+    },
+    "MStar.Model.Json.JsonAccountChart": {
+      "properties": {
+        "Id": {
+          "type": "integer",
+          "format": "int64",
+          "uniqueItems": false
+        },
+        "Props": {
+          "type": "string",
+          "uniqueItems": false
+        },
+        "Params": {
+          "type": "string",
+          "uniqueItems": false
+        },
+        "IdList": {
+          "type": "integer",
+          "format": "int32",
+          "uniqueItems": false
+        },
+        "NameList": {
+          "type": "string",
+          "uniqueItems": false
+        },
+        "IdHome": {
+          "type": "integer",
+          "format": "int32",
+          "uniqueItems": false
+        },
+        "NameHome": {
+          "type": "string",
+          "uniqueItems": false
+        },
+        "Position": {
+          "type": "string",
+          "uniqueItems": false
+        },
+        "Name": {
+          "type": "string",
+          "uniqueItems": false
+        },
+        "Timestamp": {
+          "type": "string",
+          "format": "date-time",
+          "uniqueItems": false
+        },
+        "AccountID": {
+          "type": "string",
+          "format": "guid",
+          "uniqueItems": false
+        }
+      },
+      "type": "object",
+      "format": "MStar.Model.Json.JsonAccountChart"
+    },
+    "MStar.Model.Json.JsonAccountHome": {
+      "properties": {
+        "Id": {
+          "type": "integer",
+          "format": "int32",
+          "uniqueItems": false
+        },
+        "AccountID": {
+          "type": "string",
+          "format": "guid",
+          "uniqueItems": false
+        },
+        "Code": {
+          "type": "string",
+          "uniqueItems": false
+        },
+        "MigratedFrom": {
+          "type": "integer",
+          "format": "int32",
+          "uniqueItems": false
+        },
+        "Owned": {
+          "type": "boolean",
+          "uniqueItems": false
+        },
+        "Visible": {
+          "type": "boolean",
+          "uniqueItems": false
+        },
+        "HomeType": {
+          "type": "string",
+          "uniqueItems": false
+        },
+        "AddedOnUtc": {
+          "type": "string",
+          "format": "date-time",
+          "uniqueItems": false
+        },
+        "UpdatedOnUtc": {
+          "type": "string",
+          "format": "date-time",
+          "uniqueItems": false
+        }
+      },
+      "type": "object",
+      "format": "MStar.Model.Json.JsonAccountHome"
+    },
+    "MStar.Model.Json.JsonAccountList": {
+      "properties": {
+        "Id": {
+          "type": "integer",
+          "format": "int32",
+          "uniqueItems": false
+        },
+        "AccountID": {
+          "type": "string",
+          "format": "guid",
+          "uniqueItems": false
+        },
+        "Code": {
+          "type": "string",
+          "uniqueItems": false
+        },
+        "AddedOnUtc": {
+          "type": "string",
+          "format": "date-time",
+          "uniqueItems": false
+        },
+        "UpdatedOnUtc": {
+          "type": "string",
+          "format": "date-time",
+          "uniqueItems": false
+        }
+      },
+      "type": "object",
+      "format": "MStar.Model.Json.JsonAccountList"
+    },
+    "RecoveryPassword": {
+      "properties": {
+        "code": {
+          "type": "string",
+          "uniqueItems": false
+        },
+        "password": {
+          "type": "string",
+          "uniqueItems": false
+        },
+        "isPasswordCrypt": {
+          "type": "boolean",
+          "uniqueItems": false
+        }
+      },
+      "type": "object",
+      "format": "RecoveryPassword"
+    },
+    "RegisterMarketWallLogin": {
+      "properties": {
+        "email": {
+          "type": "string",
+          "uniqueItems": false
+        },
+        "password": {
+          "type": "string",
+          "uniqueItems": false
+        },
+        "firstname": {
+          "type": "string",
+          "uniqueItems": false
+        },
+        "lastname": {
+          "type": "string",
+          "uniqueItems": false
+        },
+        "country": {
+          "type": "string",
+          "uniqueItems": false
+        },
+        "isPasswordCrypt": {
+          "type": "boolean",
+          "uniqueItems": false
+        }
+      },
+      "type": "object",
+      "format": "RegisterMarketWallLogin"
+    },
+    "RemoveChart": {
+      "properties": {
+        "id": {
+          "type": "string",
+          "uniqueItems": false
+        },
+        "IdList": {
+          "type": "string",
+          "uniqueItems": false
+        },
+        "IdHome": {
+          "type": "string",
+          "uniqueItems": false
+        },
+        "devUserID": {
+          "type": "string",
+          "uniqueItems": false
+        }
+      },
+      "type": "object",
+      "format": "RemoveChart"
+    },
+    "RemoveHome": {
+      "properties": {
+        "id": {
+          "type": "string",
+          "uniqueItems": false
+        }
+      },
+      "type": "object",
+      "format": "RemoveHome"
+    },
+    "RemoveList": {
+      "properties": {
+        "id": {
+          "type": "string",
+          "uniqueItems": false
+        },
+        "devUserID": {
+          "type": "string",
+          "uniqueItems": false
+        }
+      },
+      "type": "object",
+      "format": "RemoveList"
+    },
+    "RenameHome": {
+      "properties": {
+        "id": {
+          "type": "string",
+          "uniqueItems": false
+        },
+        "code": {
+          "type": "string",
+          "uniqueItems": false
+        },
+        "HomeType": {
+          "type": "string",
+          "uniqueItems": false
+        },
+        "Visible": {
+          "type": "boolean",
+          "uniqueItems": false
+        }
+      },
+      "type": "object",
+      "format": "RenameHome"
+    },
+    "RenameList": {
+      "properties": {
+        "id": {
+          "type": "string",
+          "uniqueItems": false
+        },
+        "code": {
+          "type": "string",
+          "uniqueItems": false
+        },
+        "devUserID": {
+          "type": "string",
+          "uniqueItems": false
+        }
+      },
+      "type": "object",
+      "format": "RenameList"
+    },
+    "SendActivationLink": {
+      "type": "object",
+      "format": "SendActivationLink"
+    },
+    "SendRecoveryPasswordLink": {
+      "type": "object",
+      "format": "SendRecoveryPasswordLink"
+    },
+    "System.IO.Stream": {
+      "type": "string",
+      "format": "stream"
+    },
+    "UpdatePassword": {
+      "properties": {
+        "oldpassword": {
+          "type": "string",
+          "uniqueItems": false
+        },
+        "newpassword": {
+          "type": "string",
+          "uniqueItems": false
+        },
+        "isPasswordCrypt": {
+          "type": "boolean",
+          "uniqueItems": false
+        }
+      },
+      "type": "object",
+      "format": "UpdatePassword"
+    }
+  }
+}
